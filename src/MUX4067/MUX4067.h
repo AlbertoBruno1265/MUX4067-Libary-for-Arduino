@@ -7,8 +7,10 @@ class mux4067
 {
   private:
     byte _sig, _s0, _s1, _s2, _s3;
+    int _opt;
 
   public:
+    mux4067(byte sig, byte s0, byte s1, byte s2, byte s3, int opt);    
     mux4067(byte sig, byte s0, byte s1, byte s2, byte s3);
     void c0();
     void c1();
