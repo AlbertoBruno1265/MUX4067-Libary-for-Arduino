@@ -155,3 +155,12 @@ int mux4067::c10(bool sig_state, int sig_pwm){
   
   return mux4067::_check_choice(sig_state, sig_pwm);
 }
+
+int mux4067::c11(bool sig_state, int sig_pwm){
+  digitalWrite(_s0, HIGH);
+  digitalWrite(_s1, HIGH);
+  digitalWrite(_s2, LOW);
+  digitalWrite(_s3, HIGH);
+  
+  return mux4067::_check_choice(sig_state, sig_pwm);
+}
