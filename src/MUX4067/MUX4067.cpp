@@ -200,3 +200,26 @@ int mux4067::c15(bool sig_state, int sig_pwm){
   
   return mux4067::_check_choice(sig_state, sig_pwm);
 }
+
+int* mux4067::all_channels_value(){
+  static int values[16] = {};
+
+  values[0] = mux4067::c0();
+  values[1] = mux4067::c1();
+  values[2] = mux4067::c2();
+  values[3] = mux4067::c3();
+  values[4] = mux4067::c4();
+  values[5] = mux4067::c5();
+  values[6] = mux4067::c6();
+  values[7] = mux4067::c7();
+  values[8] = mux4067::c8();
+  values[9] = mux4067::c9();
+  values[10] = mux4067::c10();
+  values[11] = mux4067::c11();
+  values[12] = mux4067::c12();
+  values[13] = mux4067::c13();
+  values[14] = mux4067::c14();
+  values[15] = mux4067::c15();
+
+  return values;
+}

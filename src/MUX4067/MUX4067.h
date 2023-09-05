@@ -29,6 +29,7 @@ class mux4067
     int c13(bool sig_state=LOW, int sig_pwm=0);
     int c14(bool sig_state=LOW, int sig_pwm=0);
     int c15(bool sig_state=LOW, int sig_pwm=0);
+    int* all_channels_value();
 };
 
 #endif
