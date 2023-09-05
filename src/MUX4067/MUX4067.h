@@ -15,20 +15,20 @@ class mux4067
     mux4067(byte s0, byte s1, byte s2, byte s3, byte sig);
     int c0(bool sig_state=LOW, int sig_pwm=0);
     int c1(bool sig_state=LOW, int sig_pwm=0);
-    void c2();
-    void c3();
-    void c4();
-    void c5();
-    void c6();
-    void c7();
-    void c8();
-    void c9();
-    void c10();
-    void c11();
-    void c12();
-    void c13();
-    void c14();
-    void c15();
+    int c2(bool sig_state=LOW, int sig_pwm=0);
+    int c3(bool sig_state=LOW, int sig_pwm=0);
+    int c4(bool sig_state=LOW, int sig_pwm=0);
+    int c5(bool sig_state=LOW, int sig_pwm=0);
+    int c6(bool sig_state=LOW, int sig_pwm=0);
+    int c7(bool sig_state=LOW, int sig_pwm=0);
+    int c8(bool sig_state=LOW, int sig_pwm=0);
+    int c9(bool sig_state=LOW, int sig_pwm=0);
+    int c10(bool sig_state=LOW, int sig_pwm=0);
+    int c11(bool sig_state=LOW, int sig_pwm=0);
+    int c12(bool sig_state=LOW, int sig_pwm=0);
+    int c13(bool sig_state=LOW, int sig_pwm=0);
+    int c14(bool sig_state=LOW, int sig_pwm=0);
+    int c15(bool sig_state=LOW, int sig_pwm=0);
 };
 
 #endif
