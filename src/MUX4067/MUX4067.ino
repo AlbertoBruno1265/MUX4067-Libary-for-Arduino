@@ -1,7 +1,7 @@
 #include "MUX4067.h"
 
 // Test Input Analog
-mux4067 mux(14, 12, 13, 15, A0);
+//mux4067 mux(14, 12, 13, 15, A0);
 
 // Test Input Digital
 //mux4067 mux(14, 12, 13, 15, A0, 0, 1);
@@ -10,7 +10,7 @@ mux4067 mux(14, 12, 13, 15, A0);
 //mux4067 mux(14, 12, 13, 15, 2, 1);
 
 // Test Output Digital
-//mux4067 mux(14, 12, 13, 15, 2, 1, 1);
+mux4067 mux(14, 12, 13, 15, 2, 1, 1);
 
 int sensor0;
 
@@ -24,10 +24,10 @@ void loop() {
 //  Serial.print("Sensor0: "); Serial.println(sensor0);
 
   // Test Chennel 1
-//  mux.c8(HIGH);
-//  delay(1000);
-//  mux.c8(LOW);
-//  delay(1000);
+  mux.c9(HIGH);
+  delay(1000);
+  mux.c9(LOW);
+  delay(1000);
 
   // Test Chennel 2
 //  sensor0 = mux.c2();
@@ -53,7 +53,11 @@ void loop() {
 //  sensor0 = mux.c7();
 //  Serial.print("Sensor0: "); Serial.println(sensor0);
 
-    //   Test Chennel 7
-  sensor0 = mux.c8();
-  Serial.print("Sensor0: "); Serial.println(sensor0);
+    //   Test Chennel 8
+//  sensor0 = mux.c8();
+//  Serial.print("Sensor0: "); Serial.println(sensor0);
+
+  //   Test Chennel 9
+//  sensor0 = mux.c9();
+//  Serial.print("Sensor0: "); Serial.println(sensor0);
 }
