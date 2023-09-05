@@ -44,4 +44,8 @@ void loop() {
   //   Test Chennel 5
 //  sensor0 = mux.c5();
 //  Serial.print("Sensor0: "); Serial.println(sensor0);
+
+  //   Test Chennel 6
+  sensor0 = mux.c6();
+  Serial.print("Sensor0: "); Serial.println(sensor0);
 }
