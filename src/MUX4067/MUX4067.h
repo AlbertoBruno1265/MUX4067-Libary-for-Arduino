@@ -8,10 +8,11 @@ class mux4067
   private:
     byte _sig, _s0, _s1, _s2, _s3;
     int _inpt_outpt, _analog_digit;
+    int _check_choice(bool sig_state=LOW, int sig_pwm=0);
 
   public:
-    mux4067(byte sig, byte s0, byte s1, byte s2, byte s3, int inpt_outpt, int analog_digit);    
-    mux4067(byte sig, byte s0, byte s1, byte s2, byte s3);
+    mux4067(byte s0, byte s1, byte s2, byte s3, byte sig, int inpt_outpt, int analog_digit);    
+    mux4067(byte s0, byte s1, byte s2, byte s3, byte sig);
     int c0(bool sig_state=LOW, int sig_pwm=0);
     int c1(bool sig_state=LOW, int sig_pwm=0);
     void c2();
