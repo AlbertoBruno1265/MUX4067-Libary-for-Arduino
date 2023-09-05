@@ -12,8 +12,8 @@ class mux4067
   public:
     mux4067(byte sig, byte s0, byte s1, byte s2, byte s3, int inpt_outpt, int analog_digit);    
     mux4067(byte sig, byte s0, byte s1, byte s2, byte s3);
-    int c0();
-    void c1();
+    int c0(bool sig_state=LOW, int sig_pwm=0);
+    int c1(bool sig_state=LOW, int sig_pwm=0);
     void c2();
     void c3();
     void c4();

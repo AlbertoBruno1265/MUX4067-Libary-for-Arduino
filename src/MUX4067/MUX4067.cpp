@@ -20,11 +20,10 @@ mux4067::mux4067(byte sig, byte s0, byte s1, byte s2, byte s3, int inpt_outpt, i
   _s2 = s2;
   _s3 = s3;
   _inpt_outpt = inpt_outpt;
-  _analog_digit = _analog_digit;
+  _analog_digit = analog_digit;
 }
 
 mux4067::mux4067(byte sig, byte s0, byte s1, byte s2, byte s3){
-  pinMode(sig, INPUT);
   pinMode(s0, OUTPUT);
   pinMode(s1, OUTPUT);
   pinMode(s2, OUTPUT);
@@ -37,4 +36,50 @@ mux4067::mux4067(byte sig, byte s0, byte s1, byte s2, byte s3){
   _s3 = s3;
   _inpt_outpt = 0;
   _analog_digit = 0;
+}
+
+int mux4067::c0(bool sig_state, int sig_pwm){
+  int channel_value = 0;
+  digitalWrite(_s0, LOW);
+  digitalWrite(_s1, LOW);
+  digitalWrite(_s2, LOW);
+  digitalWrite(_s3, LOW);
+
+  if (_inpt_outpt == 0 && _analog_digit == 0){
+    channel_value = analogRead(_sig);
+  }
+  else if (_inpt_outpt == 0 && _analog_digit == 1){
+    channel_value = digitalRead(_sig);
+  }
+  else if (_inpt_outpt == 1 && _analog_digit == 0){
+    analogWrite(_sig, sig_pwm);
+  }
+  else if (_inpt_outpt == 1 && _analog_digit == 1){
+    digitalWrite(_sig, sig_state);
+  }
+
+  return channel_value;
+}
+
+int mux4067::c1(bool sig_state, int sig_pwm){
+  int channel_value = 0;
+  digitalWrite(_s0, HIGH);
+  digitalWrite(_s1, LOW);
+  digitalWrite(_s2, LOW);
+  digitalWrite(_s3, LOW);
+
+  if (_inpt_outpt == 0 && _analog_digit == 0){
+    channel_value = analogRead(_sig);
+  }
+  else if (_inpt_outpt == 0 && _analog_digit == 1){
+    channel_value = digitalRead(_sig);
+  }
+  else if (_inpt_outpt == 1 && _analog_digit == 0){
+    analogWrite(_sig, sig_pwm);
+  }
+  else if (_inpt_outpt == 1 && _analog_digit == 1){
+    digitalWrite(_sig, sig_state);
+  }
+
+  return channel_value;
 }
