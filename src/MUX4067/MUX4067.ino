@@ -87,7 +87,7 @@ void loop() {
 
 //    Teste All values mathod
     for (int i=0; i<16; i++){
-      Serial.print("Sensor"); Serial.print(i); Serial.print(": "); Serial.println(mux.all_channels_value()[i]);
+      Serial.print("Channel"); Serial.print(i); Serial.print(": "); Serial.println(mux.all_channels_value()[i]);
       delay(1000);
     }
 }
