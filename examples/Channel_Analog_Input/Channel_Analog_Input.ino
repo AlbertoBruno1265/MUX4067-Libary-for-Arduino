@@ -1,6 +1,6 @@
 #include <MUX4067.h>
 
-mux4067 mux4067 mux(14, 12, 13, 15, A0);
+mux4067 mux(14, 12, 13, 15, A0);
 
 int Sensor0;
 
