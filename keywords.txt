@@ -16,3 +16,4 @@ c12			KEYWORD2
 c13			KEYWORD2
 c14			KEYWORD2
 c15			KEYWORD2
+all_channels_value	KEYWORD2
