@@ -19,7 +19,7 @@ You can access more specifications by clicking [here](https://github.com/Alberto
 ## Methods
 | **Method**           | **Description**                                                                     | **Args**                                                                                                                                     |
 | :----------------------------------------- | :------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
-| all_channels_value | Read all channels and save the value on an array
+| all_channels_value | Read all channels and save the value on an array | None
 | C0(bool sig_state=LOW, int sig_pwm=0) | Changes to Channel 0 | **sig_state**: A boolean value to set the output, **sig_pwm**: An integer number to represents PWM value in output
 | C1(bool sig_state=LOW, int sig_pwm=0) | Changes to Channel 1 | **sig_state**: A boolean value to set the output, **sig_pwm**: An integer number to represents PWM value in output
 | C2(bool sig_state=LOW, int sig_pwm=0) | Changes to Channel 2 | **sig_state**: A boolean value to set the output, **sig_pwm**: An integer number to represents PWM value in output
