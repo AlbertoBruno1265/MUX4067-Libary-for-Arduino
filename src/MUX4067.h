@@ -1,3 +1,13 @@
+/*****************************************************
+
+  CREATED BY: ALBERTO BRUNO SILVESTRE DE OLIVEIRA
+
+  GITHUB: https://github.com/AlbertoBruno1265/MUX4067-Library-for-Arduino
+  
+  MUX4067.h
+
+*****************************************************/
+
 #ifndef MUX4067
 #define MUX4067
 
